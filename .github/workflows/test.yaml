@@ -16,7 +16,6 @@ jobs:
     steps:
     - name: Authenticate and set context
       uses: redhat-actions/oc-login@v0.0.1
-      env:
       with:
         # URL to the OpenShift cluster.
         openshift_server_url: ${{ secrets.OPENSHIFT_URL }}
