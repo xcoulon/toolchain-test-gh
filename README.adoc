@@ -1,0 +1,3 @@
+= Test
+
+Testing the `oc-login` GitHub Action with secrets
