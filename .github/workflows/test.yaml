@@ -13,19 +13,19 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-  steps:
-  - name: Authenticate and set context
-    uses: redhat-actions/oc-login@v0.0.1
-    env:
-    with:
-      # URL to the OpenShift cluster.
-      openshift_server_url: ${{ secrets.OPENSHIFT_URL }}
+    steps:
+    - name: Authenticate and set context
+      uses: redhat-actions/oc-login@v0.0.1
+      env:
+      with:
+        # URL to the OpenShift cluster.
+        openshift_server_url: ${{ secrets.OPENSHIFT_URL }}
 
-      # Authentication Token. Can use username and password instead.
-      openshift_token: ${{ secrets.OPENSHIFT_TOKEN }}
+        # Authentication Token. Can use username and password instead.
+        openshift_token: ${{ secrets.OPENSHIFT_TOKEN }}
 
-      # Disables SSL cert checking. Use this if you don't have the certificate authority data.
-      insecure_skip_tls_verify: true
-      
-      # Optional - this sets your Kubernetes context's current namespace after logging in.
-      namespace: ${{ secrets.OPENSHIFT_NAMESPACE }}
+        # Disables SSL cert checking. Use this if you don't have the certificate authority data.
+        insecure_skip_tls_verify: true
+        
+        # Optional - this sets your Kubernetes context's current namespace after logging in.
+        namespace: ${{ secrets.OPENSHIFT_NAMESPACE }}
